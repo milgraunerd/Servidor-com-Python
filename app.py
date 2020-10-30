@@ -1,20 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
+
+#render_template - função de python que tem no flask que renderiza templates
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/') #Cria uma nova rota
 def index():
-    return "Hello World!!"
+    return render_template('index.html', lista = ['Tiago', 'Rogério', 'Mateus', 'Yan', 'Daniel'])
 
-@app.route('/tiago')
-def tiago():
-    return "Hello Tiago :-D"
-
-'''
-Ctrl + L - Limpar o terminal
-Subir para o github:
-1º - git add "nomedoarquivo.py"
-2º - git commit -m "descrição do commit aqui"
-3º - git push
-PRONTO!!
-'''
+@app.route('/<nome>')
+def ola_com_nome(nome):
+    return render_template('index.html', nome_pessoa=nome)
