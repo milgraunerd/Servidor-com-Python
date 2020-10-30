@@ -7,7 +7,7 @@
 <body>
     {% if nome_pessoa %}
         <h1>Hello World!! {{ nome_pessoa }}</h1>
-        <p style="color: red">agora escreve um paragrafo de texto</p>
+        <p style="color: red">{{ nome_pessoa }}, agora escreva um paragrafo de texto.</p>
     {% else %}
         <h1>Hello desconhecido</h1>
         <h4>Escolha um nome e coloque na rota</h4>
