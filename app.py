@@ -1,7 +1,7 @@
   
 from flask import Flask, render_template
 
-#render_template - função de python que tem no flask que renderiza templates
+#render_template - função do python que tem no flask que renderiza templates
 
 app = Flask(__name__)
 
